@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.phelps.goodssell.mapper.AdminSmsTemplateMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.phelps.goodssell.entity.AdminSmsTemplate">
+		<id column="id" property="id" />
+		<result column="sms_name" property="smsName" />
+		<result column="sms_identify" property="smsIdentify" />
+		<result column="sms_state" property="smsState" />
+		<result column="sms_content" property="smsContent" />
+		<result column="create_time" property="createTime" />
+		<result column="sms_type" property="smsType" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sms_name AS smsName, sms_identify AS smsIdentify, sms_state AS smsState, sms_content AS smsContent, create_time AS createTime, sms_type AS smsType
+    </sql>
+</mapper>

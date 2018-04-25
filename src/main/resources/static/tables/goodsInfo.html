@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD GoodsInfo</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD GoodsInfo</h1>
+        <p class="toolbar">
+            <a class="create btn btn-primary" href="javascript:">新增</a>
+            <span class="alert"></span>
+        </p>
+        <table id="table"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-search="true"
+               data-query-params="queryParams"
+               data-toolbar=".toolbar">
+            <thead>
+            <tr>
+                                                            <th data-field="id">id</th>
+                                                                                <th data-field="goodsCode">goodsCode</th>
+                                                                                <th data-field="goodsName">goodsName</th>
+                                                                                <th data-field="goodsPrice">goodsPrice</th>
+                                                                                <th data-field="goodsUrl">goodsUrl</th>
+                                                                                <th data-field="costScore">costScore</th>
+                                                                                <th data-field="goodsNums">goodsNums</th>
+                                                                                <th data-field="startTime">startTime</th>
+                                                                                <th data-field="endTime">endTime</th>
+                                                                                <th data-field="createTime">createTime</th>
+                                                                                <th data-field="updatePersonId">updatePersonId</th>
+                                                                                <th data-field="shopCode">shopCode</th>
+                                                    <!---->
+                <!--<th data-field="stargazers_count">Stars</th>-->
+                <!--<th data-field="forks_count">Forks</th>-->
+                <!--<th data-field="description">Description</th>-->
+                <th data-field="action"
+                    data-align="center"
+                    data-formatter="actionFormatter"
+                    data-events="actionEvents">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="modal" class="modal fade">
+        <form id="formSubmit">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                                                                                                                                    <div class="form-group">
+                                <label class="col-sm-2 control-label" for="goodsCode">goodsCode</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="goodsCode" name="goodsCode" placeholder="goodsCode">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="goodsName">goodsName</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="goodsName" name="goodsName" placeholder="goodsName">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="goodsPrice">goodsPrice</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="goodsPrice" name="goodsPrice" placeholder="goodsPrice">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="goodsUrl">goodsUrl</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="goodsUrl" name="goodsUrl" placeholder="goodsUrl">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="costScore">costScore</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="costScore" class="form-control" name="costScore" placeholder="costScore">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="goodsNums">goodsNums</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="goodsNums" class="form-control" name="goodsNums" placeholder="goodsNums">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="startTime">startTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="startTime" class="form-control" name="startTime" placeholder="startTime">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="endTime">endTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="endTime" class="form-control" name="endTime" placeholder="endTime">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="createTime">createTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="createTime" class="form-control" name="createTime" placeholder="createTime">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="updatePersonId">updatePersonId</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="updatePersonId" class="form-control" name="updatePersonId" placeholder="updatePersonId">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="shopCode">shopCode</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="shopCode" name="shopCode" placeholder="shopCode">
+                            </div>
+                            </div>
+                                                                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary submit">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        </form>
+    </div>
+                    <script>
+                        (function($){
+                            var Controller = $.initController({url:"goodsInfo/"});
+                        })(jQuery);
+                    </script>
+</body>
+</html>

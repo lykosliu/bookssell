@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD AdminInfo</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD AdminInfo</h1>
+        <p class="toolbar">
+            <a class="create btn btn-primary" href="javascript:">新增</a>
+            <span class="alert"></span>
+        </p>
+        <table id="table"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-search="true"
+               data-query-params="queryParams"
+               data-toolbar=".toolbar">
+            <thead>
+            <tr>
+                                                            <th data-field="id">id</th>
+                                                                                <th data-field="loginName">loginName</th>
+                                                                                <th data-field="loginPwd">loginPwd</th>
+                                                                                <th data-field="createTime">createTime</th>
+                                                                                <th data-field="flag">flag</th>
+                                                                                <th data-field="lastLoginTime">lastLoginTime</th>
+                                                                                <th data-field="type">type</th>
+                                                                                <th data-field="shopCode">shopCode</th>
+                                                    <!---->
+                <!--<th data-field="stargazers_count">Stars</th>-->
+                <!--<th data-field="forks_count">Forks</th>-->
+                <!--<th data-field="description">Description</th>-->
+                <th data-field="action"
+                    data-align="center"
+                    data-formatter="actionFormatter"
+                    data-events="actionEvents">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="modal" class="modal fade">
+        <form id="formSubmit">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                                                                                                                                    <div class="form-group">
+                                <label class="col-sm-2 control-label" for="loginName">loginName</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="loginName" name="loginName" placeholder="loginName">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="loginPwd">loginPwd</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="loginPwd" name="loginPwd" placeholder="loginPwd">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="createTime">createTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="createTime" class="form-control" name="createTime" placeholder="createTime">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="flag">flag</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="flag" class="form-control" name="flag" placeholder="flag">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="lastLoginTime">lastLoginTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="lastLoginTime" class="form-control" name="lastLoginTime" placeholder="lastLoginTime">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="type">type</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="type" class="form-control" name="type" placeholder="type">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="shopCode">shopCode</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="shopCode" name="shopCode" placeholder="shopCode">
+                            </div>
+                            </div>
+                                                                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary submit">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        </form>
+    </div>
+                    <script>
+                        (function($){
+                            var Controller = $.initController({url:"adminInfo/"});
+                        })(jQuery);
+                    </script>
+</body>
+</html>

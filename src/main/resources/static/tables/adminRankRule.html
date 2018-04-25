@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD AdminRankRule</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD AdminRankRule</h1>
+        <p class="toolbar">
+            <a class="create btn btn-primary" href="javascript:">新增</a>
+            <span class="alert"></span>
+        </p>
+        <table id="table"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-search="true"
+               data-query-params="queryParams"
+               data-toolbar=".toolbar">
+            <thead>
+            <tr>
+                                                            <th data-field="id">id</th>
+                                                                                <th data-field="userRankCode">userRankCode</th>
+                                                                                <th data-field="userRankName">userRankName</th>
+                                                                                <th data-field="standardScore">standardScore</th>
+                                                                                <th data-field="createTime">createTime</th>
+                                                                                <th data-field="flag">flag</th>
+                                                                                <th data-field="updateTime">updateTime</th>
+                                                                                <th data-field="updatePersonId">updatePersonId</th>
+                                                    <!---->
+                <!--<th data-field="stargazers_count">Stars</th>-->
+                <!--<th data-field="forks_count">Forks</th>-->
+                <!--<th data-field="description">Description</th>-->
+                <th data-field="action"
+                    data-align="center"
+                    data-formatter="actionFormatter"
+                    data-events="actionEvents">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="modal" class="modal fade">
+        <form id="formSubmit">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                                                                                                                                    <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userRankCode">userRankCode</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userRankCode" name="userRankCode" placeholder="userRankCode">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userRankName">userRankName</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userRankName" name="userRankName" placeholder="userRankName">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="standardScore">standardScore</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="standardScore" class="form-control" name="standardScore" placeholder="standardScore">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="createTime">createTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="createTime" class="form-control" name="createTime" placeholder="createTime">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="flag">flag</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="flag" class="form-control" name="flag" placeholder="flag">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="updateTime">updateTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="updateTime" class="form-control" name="updateTime" placeholder="updateTime">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="updatePersonId">updatePersonId</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="updatePersonId" class="form-control" name="updatePersonId" placeholder="updatePersonId">
+                                 </div>
+                            </div>
+                                                                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary submit">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        </form>
+    </div>
+                    <script>
+                        (function($){
+                            var Controller = $.initController({url:"adminRankRule/"});
+                        })(jQuery);
+                    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.update {
+    color: #333;
+    margin-right: 5px;
+}
+.remove {
+    color: red;
+    margin-left: 5px;
+}
+.alert {
+    padding: 0 14px;
+    margin-bottom: 0;
+    display: inline-block;
+}

@@ -1,0 +1,21 @@
+server:
+ port: 8090
+mybatis:
+  mapper-locations: classpath:xml/*Mapper.xml
+
+vipcoder:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    maximumPoolSize: 10
+    defaultTarget: r_0
+    #写库方法前缀
+    writePrefix: insert*,update*,delete*
+    targets:
+      w_0:
+        url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8
+        username: root
+        password: 
+      r_0:
+        url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8
+        username: root
+        password: 

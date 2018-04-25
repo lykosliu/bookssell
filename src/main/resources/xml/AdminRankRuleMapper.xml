@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.phelps.goodssell.mapper.AdminRankRuleMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.phelps.goodssell.entity.AdminRankRule">
+		<id column="id" property="id" />
+		<result column="user_rank_code" property="userRankCode" />
+		<result column="user_rank_name" property="userRankName" />
+		<result column="standard_score" property="standardScore" />
+		<result column="create_time" property="createTime" />
+		<result column="flag" property="flag" />
+		<result column="update_time" property="updateTime" />
+		<result column="update_person_id" property="updatePersonId" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_rank_code AS userRankCode, user_rank_name AS userRankName, standard_score AS standardScore, create_time AS createTime, flag, update_time AS updateTime, update_person_id AS updatePersonId
+    </sql>
+</mapper>

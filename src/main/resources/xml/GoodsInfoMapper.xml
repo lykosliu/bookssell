@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.phelps.goodssell.mapper.GoodsInfoMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.phelps.goodssell.entity.GoodsInfo">
+		<id column="id" property="id" />
+		<result column="goods_code" property="goodsCode" />
+		<result column="goods_name" property="goodsName" />
+		<result column="goods_price" property="goodsPrice" />
+		<result column="goods_url" property="goodsUrl" />
+		<result column="cost_score" property="costScore" />
+		<result column="goods_nums" property="goodsNums" />
+		<result column="start_time" property="startTime" />
+		<result column="end_time" property="endTime" />
+		<result column="create_time" property="createTime" />
+		<result column="update_person_id" property="updatePersonId" />
+		<result column="shop_code" property="shopCode" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_code AS goodsCode, goods_name AS goodsName, goods_price AS goodsPrice, goods_url AS goodsUrl, cost_score AS costScore, goods_nums AS goodsNums, start_time AS startTime, end_time AS endTime, create_time AS createTime, update_person_id AS updatePersonId, shop_code AS shopCode
+    </sql>
+</mapper>

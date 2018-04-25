@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD UserBaseInfo</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD UserBaseInfo</h1>
+        <p class="toolbar">
+            <a class="create btn btn-primary" href="javascript:">新增</a>
+            <span class="alert"></span>
+        </p>
+        <table id="table"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-search="true"
+               data-query-params="queryParams"
+               data-toolbar=".toolbar">
+            <thead>
+            <tr>
+                                                            <th data-field="id">id</th>
+                                                                                <th data-field="userName">userName</th>
+                                                                                <th data-field="userPhone">userPhone</th>
+                                                                                <th data-field="userEmail">userEmail</th>
+                                                                                <th data-field="state">state</th>
+                                                                                <th data-field="userBirth">userBirth</th>
+                                                                                <th data-field="userTotalScore">userTotalScore</th>
+                                                                                <th data-field="userLevelCode">userLevelCode</th>
+                                                                                <th data-field="userCardCode">userCardCode</th>
+                                                                                <th data-field="createTime">createTime</th>
+                                                    <!---->
+                <!--<th data-field="stargazers_count">Stars</th>-->
+                <!--<th data-field="forks_count">Forks</th>-->
+                <!--<th data-field="description">Description</th>-->
+                <th data-field="action"
+                    data-align="center"
+                    data-formatter="actionFormatter"
+                    data-events="actionEvents">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="modal" class="modal fade">
+        <form id="formSubmit">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                                                                                                                                    <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userName">userName</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userName" name="userName" placeholder="userName">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userPhone">userPhone</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userPhone" name="userPhone" placeholder="userPhone">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userEmail">userEmail</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="userEmail">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="state">state</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="state" class="form-control" name="state" placeholder="state">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userBirth">userBirth</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userBirth" name="userBirth" placeholder="userBirth">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userTotalScore">userTotalScore</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="userTotalScore" class="form-control" name="userTotalScore" placeholder="userTotalScore">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userLevelCode">userLevelCode</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userLevelCode" name="userLevelCode" placeholder="userLevelCode">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userCardCode">userCardCode</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="userCardCode" name="userCardCode" placeholder="userCardCode">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="createTime">createTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="createTime" class="form-control" name="createTime" placeholder="createTime">
+                            </div>
+                            </div>
+                                                                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary submit">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        </form>
+    </div>
+                    <script>
+                        (function($){
+                            var Controller = $.initController({url:"userBaseInfo/"});
+                        })(jQuery);
+                    </script>
+</body>
+</html>

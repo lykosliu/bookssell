@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD SmsRecordInfo</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD SmsRecordInfo</h1>
+        <p class="toolbar">
+            <a class="create btn btn-primary" href="javascript:">新增</a>
+            <span class="alert"></span>
+        </p>
+        <table id="table"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-search="true"
+               data-query-params="queryParams"
+               data-toolbar=".toolbar">
+            <thead>
+            <tr>
+                                                            <th data-field="id">id</th>
+                                                                                <th data-field="astId">astId</th>
+                                                                                <th data-field="sriContent">sriContent</th>
+                                                                                <th data-field="userId">userId</th>
+                                                                                <th data-field="sriAccount">sriAccount</th>
+                                                                                <th data-field="sriState">sriState</th>
+                                                                                <th data-field="sriMark">sriMark</th>
+                                                                                <th data-field="createTime">createTime</th>
+                                                    <!---->
+                <!--<th data-field="stargazers_count">Stars</th>-->
+                <!--<th data-field="forks_count">Forks</th>-->
+                <!--<th data-field="description">Description</th>-->
+                <th data-field="action"
+                    data-align="center"
+                    data-formatter="actionFormatter"
+                    data-events="actionEvents">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="modal" class="modal fade">
+        <form id="formSubmit">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                                                                                                                                    <div class="form-group">
+                                <label class="col-sm-2 control-label" for="astId">astId</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="astId" class="form-control" name="astId" placeholder="astId">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="sriContent">sriContent</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="sriContent" name="sriContent" placeholder="sriContent">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="userId">userId</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="userId" class="form-control" name="userId" placeholder="userId">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="sriAccount">sriAccount</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="sriAccount" name="sriAccount" placeholder="sriAccount">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="sriState">sriState</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="sriState" class="form-control" name="sriState" placeholder="sriState">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="sriMark">sriMark</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="sriMark" name="sriMark" placeholder="sriMark">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="createTime">createTime</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="createTime" class="form-control" name="createTime" placeholder="createTime">
+                            </div>
+                            </div>
+                                                                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary submit">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        </form>
+    </div>
+                    <script>
+                        (function($){
+                            var Controller = $.initController({url:"smsRecordInfo/"});
+                        })(jQuery);
+                    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.phelps.goodssell.mapper.GoodsConvertInfoMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.phelps.goodssell.entity.GoodsConvertInfo">
+		<id column="id" property="id" />
+		<result column="goods_id" property="goodsId" />
+		<result column="user_id" property="userId" />
+		<result column="goods_code" property="goodsCode" />
+		<result column="goods_name" property="goodsName" />
+		<result column="user_name" property="userName" />
+		<result column="user_card_code" property="userCardCode" />
+		<result column="num" property="num" />
+		<result column="cost_score" property="costScore" />
+		<result column="create_time" property="createTime" />
+		<result column="shop_code" property="shopCode" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_id AS goodsId, user_id AS userId, goods_code AS goodsCode, goods_name AS goodsName, user_name AS userName, user_card_code AS userCardCode, num, cost_score AS costScore, create_time AS createTime, shop_code AS shopCode
+    </sql>
+</mapper>
